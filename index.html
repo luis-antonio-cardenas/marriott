@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singapore Marriott Tang Plaza Hotel | Official Experience & Guest Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #8b1d24;
+      --primary-dark: #631217;
+      --primary-light: #b02e37;
+      --gold: #c5a059;
+      --gold-light: #e6cb95;
+      --dark: #121316;
+      --dark-card: #1c1e24;
+      --gray-100: #f8f9fa;
+      --gray-200: #eef1f5;
+      --gray-300: #d8dde6;
+      --gray-600: #64748b;
+      --gray-800: #1e293b;
+      --white: #ffffff;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 10px 25px -3px rgba(0, 0, 0, 0.12);
+      --shadow-lg: 0 20px 35px -5px rgba(0, 0, 0, 0.18);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--gray-800);
+      background-color: #fafbfc;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(18, 19, 22, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    .brand-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--white);
+    }
+
+    .brand-logo span {
+      color: var(--gold);
+    }
+
+    .nav-tagline {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold-light);
+      border-left: 1px solid rgba(255,255,255,0.25);
+      padding-left: 12px;
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .nav-tagline { display: block; }
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), #a78440);
+      color: var(--dark) !important;
+      font-weight: 600 !important;
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+      transition: var(--transition);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(197, 160, 89, 0.45);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 92vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(rgba(10, 11, 14, 0.65), rgba(10, 11, 14, 0.8)), 
+                  url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: var(--white);
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin-top: 2rem;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(197, 160, 89, 0.2);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: #cbd5e1;
+      margin-bottom: 2.2rem;
+      font-weight: 300;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .btn-outline {
+      border: 1.5px solid var(--white);
+      color: var(--white);
+      background: transparent;
+      padding: 0.6rem 1.6rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--dark);
+    }
+
+    /* Key Information Strip */
+    .info-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-300);
+      padding: 2.5rem 1.5rem;
+      margin-top: -3.5rem;
+      position: relative;
+      z-index: 10;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .info-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: #fdf5ea;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .info-text h4 {
+      font-size: 1.05rem;
+      color: var(--dark);
+      margin-bottom: 0.2rem;
+    }
+
+    .info-text p {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+    }
+
+    /* Highlights Section */
+    .section-title {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-title span {
+      color: var(--gold);
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .section-title h2 {
+      font-size: 2.4rem;
+      color: var(--dark);
+      margin-top: 0.4rem;
+    }
+
+    .section-padding {
+      padding: 5.5rem 1.5rem;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .amenity-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid var(--gray-200);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .amenity-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .amenity-img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .amenity-body {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .amenity-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      background: #f1f5f9;
+      color: var(--primary);
+      border-radius: 6px;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .amenity-body h3 {
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .amenity-body p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .ask-btn-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      transition: var(--transition);
+    }
+
+    .ask-btn-trigger:hover {
+      color: var(--primary);
+      gap: 9px;
+    }
+
+    /* Knowledge Base / FAQ Section */
+    .faq-section {
+      background: #f4f6f9;
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #94a3b8;
+      padding: 4rem 1.5rem 2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-col ul li a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.8rem;
+    }
+
+    /* CHATBOT WIDGET STYLES */
+    .chat-bubble-launcher {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--white);
+      border: 2px solid var(--gold);
+      box-shadow: 0 10px 25px rgba(139, 29, 36, 0.45);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      z-index: 9999;
+      transition: var(--transition);
+    }
+
+    .chat-bubble-launcher:hover {
+      transform: scale(1.08) rotate(5deg);
+    }
+
+    .chat-pulse {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      width: 16px;
+      height: 16px;
+      background: #10b981;
+      border: 3px solid var(--white);
+      border-radius: 50%;
+    }
+
+    .chat-modal {
+      position: fixed;
+      bottom: 100px;
+      right: 25px;
+      width: 420px;
+      max-width: calc(100vw - 40px);
+      height: 620px;
+      max-height: calc(100vh - 130px);
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--gray-300);
+      display: flex;
+      flex-direction: column;
+      z-index: 10000;
+      overflow: hidden;
+      transform: translateY(30px) scale(0.95);
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition);
+    }
+
+    .chat-modal.open {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .chat-header {
+      background: linear-gradient(135deg, var(--dark), #262933);
+      color: var(--white);
+      padding: 1.1rem 1.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .chat-header-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .agent-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      border: 2px solid var(--white);
+    }
+
+    .agent-meta h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .agent-meta p {
+      font-size: 0.72rem;
+      color: #10b981;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .agent-meta p::before {
+      content: '';
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: #10b981;
+      border-radius: 50%;
+    }
+
+    .chat-close-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .chat-close-btn:hover {
+      color: var(--white);
+    }
+
+    /* Quick category pills */
+    .chat-quick-actions {
+      padding: 8px 12px;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--gray-200);
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+    .chat-quick-actions::-webkit-scrollbar { display: none; }
+
+    .quick-pill {
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 12px;
+      background: var(--white);
+      border: 1px solid var(--gray-300);
+      color: var(--gray-800);
+      cursor: pointer;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .quick-pill:hover {
+      background: var(--gold);
+      color: var(--dark);
+      border-color: var(--gold);
+    }
+
+    /* Message stream */
+    .chat-messages {
+      flex: 1;
+      padding: 1.2rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: #fdfdfd;
+    }
+
+    .message {
+      display: flex;
+      flex-direction: column;
+      max-width: 86%;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .message.bot {
+      align-self: flex-start;
+    }
+
+    .message.user {
+      align-self: flex-end;
+    }
+
+    .msg-content {
+      padding: 11px 15px;
+      border-radius: 14px;
+      font-size: 0.88rem;
+      line-height: 1.45;
+      position: relative;
+    }
+
+    .bot .msg-content {
+      background: #f1f5f9;
+      color: var(--gray-800);
+      border-bottom-left-radius: 3px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .user .msg-content {
+      background: var(--primary);
+      color: var(--white);
+      border-bottom-right-radius: 3px;
+    }
+
+    .msg-meta {
+      font-size: 0.7rem;
+      margin-top: 4px;
+      color: #94a3b8;
+    }
+
+    .bot .msg-meta { margin-left: 2px; }
+    .user .msg-meta { text-align: right; margin-right: 2px; }
+
+    /* Escalation / Protocol Card inside Chat */
+    .escalation-card {
+      margin-top: 8px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      border-left: 3px solid #dc2626;
+      background: #fff5f5;
+      color: #991b1b;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .escalation-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.68rem;
+      letter-spacing: 0.5px;
+    }
+
+    .routing-tag {
+      background: rgba(0,0,0,0.06);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    .suggestions-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .suggestion-chip {
+      background: #eef2f6;
+      border: 1px solid #cbd5e1;
+      padding: 5px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      color: #1e293b;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .suggestion-chip:hover {
+      background: #e2e8f0;
+      border-color: var(--gold);
+    }
+
+    /* Input area */
+    .chat-input-area {
+      padding: 0.9rem 1rem;
+      border-top: 1px solid var(--gray-200);
+      background: var(--white);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .chat-input-area input {
+      flex: 1;
+      padding: 0.65rem 1rem;
+      border: 1px solid var(--gray-300);
+      border-radius: 25px;
+      font-size: 0.88rem;
+      outline: none;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+
+    .chat-input-area input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.2);
+    }
+
+    .send-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .send-btn:hover {
+      background: var(--primary-dark);
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .chat-modal {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+      }
+      .chat-bubble-launcher {
+        bottom: 15px;
+        right: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <a href="#" class="nav-brand">
+      <div class="brand-logo">MARRIOTT<span>.</span></div>
+      <div class="nav-tagline">Singapore Tang Plaza • AI Deployment Initiative</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#ai-innovations">AI Innovations</a></li>
+      <li><a href="#location">Location</a></li>
+      <li>
+        <button class="btn-gold" onclick="openChatWithQuery('What time is check-in?')">
+          <i class="fa-solid fa-comments"></i> Guest Concierge
+        </button>
+      </li>
+    </ul>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge"><i class="fa-solid fa-microchip"></i> Smart Hotel AI Initiative</span>
+      <h1>Excellence in Hospitality, Powered by Intelligent Assistance</h1>
+      <p>Welcome to Singapore Marriott Tang Plaza Hotel. Enjoy prime Orchard Road luxury complemented by our 24/7 AI-powered Concierge and seamless digital experiences.</p>
+      <div class="hero-actions">
+        <button class="btn-gold" onclick="toggleChat()">
+          <i class="fa-solid fa-robot"></i> Open Guest Chatbot
+        </button>
+        <a href="#ai-innovations" class="btn-outline">
+          <i class="fa-solid fa-lightbulb"></i> Explore Our AI Technology
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Highlights Strip -->
+  <div class="info-strip">
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
+        <div class="info-text">
+          <h4>Check-in / Check-out</h4>
+          <p>Check-in: 3:00 PM • Check-out: 12:00 PM</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon"><i class="fa-solid fa-utensils"></i></div>
+        <div class="info-text">
+          <h4>Dining & Breakfast</h4>
+          <p>6:30 AM – 10:30 AM daily at restaurant</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon"><i class="fa-solid fa-dumbbell"></i></div>
+        <div class="info-text">
+          <h4>Fitness & Outdoor Pool</h4>
+          <p>Gym: 6 AM–10 PM • Pool: 7 AM–9 PM</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="info-text">
+          <h4>Smart Guest Escalation</h4>
+          <p>Direct routing to Front Desk & Housekeeping</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Amenities Section -->
+  <section id="amenities" class="section-padding">
+    <div class="section-title">
+      <span>Signature Experience</span>
+      <h2>Designed for Comfort & Business</h2>
+    </div>
+
+    <div class="amenities-grid">
+      <!-- Card 1 -->
+      <div class="amenity-card">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Executive Room" class="amenity-img">
+        <div class="amenity-body">
+          <div>
+            <span class="amenity-badge">Arrival & Comfort</span>
+            <h3>Luxury Accommodations</h3>
+            <p>Thoughtfully appointed guestrooms with complimentary high-speed Wi-Fi, pillow menus, and Singapore city views.</p>
+          </div>
+          <button class="ask-btn-trigger" onclick="openChatWithQuery('Can I check in early?')">
+            Ask about early check-in <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="amenity-card">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Fine Dining" class="amenity-img">
+        <div class="amenity-body">
+          <div>
+            <span class="amenity-badge">Dining</span>
+            <h3>Award-Winning Gastronomy</h3>
+            <p>Savor culinary masterpieces with vegetarian selections, 24/7 dining support, and in-room service till 11:00 PM.</p>
+          </div>
+          <button class="ask-btn-trigger" onclick="openChatWithQuery('What time is breakfast served?')">
+            Ask about breakfast hours <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="amenity-card">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="Business Facilities" class="amenity-img">
+        <div class="amenity-body">
+          <div>
+            <span class="amenity-badge">Bleisure & Business</span>
+            <h3>Executive Workspaces</h3>
+            <p>Dedicated business center open from 7:00 AM to 10:00 PM with quiet zones and document printing services.</p>
+          </div>
+          <button class="ask-btn-trigger" onclick="openChatWithQuery('Is there a quiet place to work?')">
+            Ask about workspace options <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marriott AI Deployment in Singapore Section -->
+  <section id="ai-innovations" class="section-padding faq-section">
+    <div class="section-title">
+      <span>Digital Transformation in Hospitality</span>
+      <h2>Marriott's AI Deployment in Singapore</h2>
+      <p style="color: var(--gray-600); margin-top: 8px;">Pioneering smart hotel technology to elevate the guest experience across our Classic and Distinctive brands.</p>
+    </div>
+
+    <div class="info-grid" style="max-width: 1000px; margin: 0 auto;">
+      <div class="amenity-card" style="padding: 1.5rem; background: var(--white);">
+        <div class="info-icon" style="margin-bottom: 1rem;"><i class="fa-solid fa-robot"></i></div>
+        <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Chatbots & Digital Concierge</h3>
+        <p style="color: var(--gray-600); font-size: 0.9rem;">Leveraging natural language processing, our AI-powered chatbots facilitate seamless communication. Guests can effortlessly request services, book facilities, and receive instant support directly from their mobile devices, ensuring a highly responsive 24/7 service.</p>
+      </div>
+      
+      <div class="amenity-card" style="padding: 1.5rem; background: var(--white);">
+        <div class="info-icon" style="margin-bottom: 1rem;"><i class="fa-solid fa-id-card-clip"></i></div>
+        <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Automated Check-in/Out</h3>
+        <p style="color: var(--gray-600); font-size: 0.9rem;">Embracing a mobile-first mentality, we deploy automated kiosks and facial recognition technology. This frictionless process allows tech-savvy travelers to bypass the front desk and autonomously access their rooms with digital IDs and mobile keys.</p>
+      </div>
+
+      <div class="amenity-card" style="padding: 1.5rem; background: var(--white);">
+        <div class="info-icon" style="margin-bottom: 1rem;"><i class="fa-solid fa-concierge-bell"></i></div>
+        <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Service Robots</h3>
+        <p style="color: var(--gray-600); font-size: 0.9rem;">To augment our dedicated staff, autonomous service robots are integrated into our front-end operations. From independently delivering fresh towels to interacting with guests, these intelligent interfaces blend innovation with Marriott's time-honored hospitality.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Contact -->
+  <section id="location" class="section-padding">
+    <div class="section-title">
+      <span>Prime Singapore Destination</span>
+      <h2>Conveniently Located on Orchard Road</h2>
+    </div>
+    <div style="background: var(--white); border-radius: 16px; padding: 2.5rem; box-shadow: var(--shadow-md); display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: center;">
+      <div>
+        <h3 style="margin-bottom: 1rem; color: var(--dark);">Singapore Marriott Tang Plaza Hotel</h3>
+        <p style="color: var(--gray-600); margin-bottom: 1.5rem;">
+          320 Orchard Road, Singapore 238865<br>
+          Direct underground access to Orchard MRT Station and iconic shopping districts.
+        </p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.9rem;">
+          <li><i class="fa-solid fa-plane-arrival" style="color: var(--gold); width: 20px;"></i> Changi International Airport: ~25 mins via taxi</li>
+          <li><i class="fa-solid fa-tree" style="color: var(--gold); width: 20px;"></i> Gardens by the Bay & Marina Bay: ~15 mins</li>
+          <li><i class="fa-solid fa-headset" style="color: var(--gold); width: 20px;"></i> Front Desk Concierge: Available 24 Hours</li>
+        </ul>
+      </div>
+      <div style="text-align: center; background: #fafafc; padding: 2rem; border-radius: 12px; border: 1px dashed var(--gold);">
+        <i class="fa-solid fa-comments-dollar" style="font-size: 2.5rem; color: var(--gold); margin-bottom: 1rem;"></i>
+        <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Have a Specific Inquiry?</h4>
+        <p style="color: var(--gray-600); font-size: 0.88rem; margin-bottom: 1.2rem;">Our virtual concierge can instantly confirm amenities or route requests to our duty manager.</p>
+        <button class="btn-gold" onclick="openChatWithQuery('Can you suggest a place to visit after my meetings?')">Chat with Concierge</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4 class="brand-logo">MARRIOTT<span>.</span></h4>
+        <p style="font-size: 0.85rem; line-height: 1.6;">An initiative demonstrating Marriott's deployment of AI technologies such as ChatBotlr, automated check-in, and service robots across our Singapore properties.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Guest Services</h4>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="openChatWithQuery('What time is check-in?')">Check-in & Check-out</a></li>
+          <li><a href="javascript:void(0)" onclick="openChatWithQuery('What are the gym opening hours?')">Gym & Pool Hours</a></li>
+          <li><a href="javascript:void(0)" onclick="openChatWithQuery('Is room service available?')">Dining & Room Service</a></li>
+          <li><a href="javascript:void(0)" onclick="openChatWithQuery('Can I request extra towels?')">Housekeeping Requests</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Direct Departments</h4>
+        <ul>
+          <li>Front Desk / Reception</li>
+          <li>Housekeeping & Guest Care</li>
+          <li>Concierge & Local Tours</li>
+          <li>Safety & Security Protocol</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Singapore Marriott Tang Plaza Hotel. Smart Hotel Technology Initiative.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Chatbot Widget -->
+  <div class="chat-bubble-launcher" id="chatLauncher" onclick="toggleChat()" title="Chat with Marriott Assistant">
+    <i class="fa-solid fa-comment-dots"></i>
+    <div class="chat-pulse"></div>
+  </div>
+
+  <!-- Chatbot Window -->
+  <div class="chat-modal" id="chatModal">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="agent-avatar"><i class="fa-solid fa-bell-concierge"></i></div>
+        <div class="agent-meta">
+          <h4>Marriott Concierge AI</h4>
+          <p>Verified Knowledge Base • 55 FAQs</p>
+        </div>
+      </div>
+      <button class="chat-close-btn" onclick="toggleChat()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Quick category shortcuts -->
+    <div class="chat-quick-actions">
+      <span class="quick-pill" onclick="sendQuickMessage('What time is check-in?')">⏰ Check-in</span>
+      <span class="quick-pill" onclick="sendQuickMessage('What time is breakfast served?')">🍳 Breakfast</span>
+      <span class="quick-pill" onclick="sendQuickMessage('Is Wi-Fi available?')">📶 Wi-Fi</span>
+      <span class="quick-pill" onclick="sendQuickMessage('What are the gym opening hours?')">💪 Gym</span>
+      <span class="quick-pill" onclick="sendQuickMessage('Can I request extra towels?')">🧺 Towels</span>
+      <span class="quick-pill" onclick="sendQuickMessage('Can you suggest a place to visit after my meetings?')">🌆 Local Tour</span>
+    </div>
+
+    <!-- Message Feed -->
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot">
+        <div class="msg-content">
+          Hello! Welcome to Singapore Marriott Tang Plaza Hotel. I am your Virtual Guest Assistant. How may I help enhance your stay today?
+          <div class="suggestions-container">
+            <span class="suggestion-chip" onclick="sendQuickMessage('What time is check-in?')">Check-in time?</span>
+            <span class="suggestion-chip" onclick="sendQuickMessage('Is there a swimming pool?')">Swimming pool?</span>
+            <span class="suggestion-chip" onclick="sendQuickMessage('How do I get to the airport?')">Airport directions?</span>
+          </div>
+        </div>
+        <div class="msg-meta">Concierge Bot • Just now</div>
+      </div>
+    </div>
+
+    <!-- Input Form -->
+    <form class="chat-input-area" id="chatForm" onsubmit="handleChatSubmit(event)">
+      <input type="text" id="chatInput" placeholder="Ask about check-in, pool, breakfast..." autocomplete="off">
+      <button type="submit" class="send-btn" title="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+
+  <script>
+    const FAQ_DATABASE = [
+  {
+    id: "FAQ001",
+    category: "Arrival & Check-in",
+    question: "What time is check-in?",
+    answer: "Check-in starts at 3:00 PM.",
+    escalation: "No",
+    routing: "Front Desk",
+    keywords: ["what", "time", "checkin"]
+  },
+  {
+    id: "FAQ002",
+    category: "Arrival & Check-in",
+    question: "Can I check in early?",
+    answer: "Early check-in depends on room availability. Please contact the Front Desk to request it.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["check", "early"]
+  },
+  {
+    id: "FAQ003",
+    category: "Arrival & Check-in",
+    question: "Can I store my luggage before check-in?",
+    answer: "Yes. Please ask the Front Desk about complimentary luggage storage.",
+    escalation: "No",
+    routing: "Front Desk",
+    keywords: ["store", "luggage", "before", "checkin"]
+  },
+  {
+    id: "FAQ004",
+    category: "Arrival & Check-in",
+    question: "What documents do I need for check-in?",
+    answer: "Please bring a valid government-issued photo ID and your booking confirmation.",
+    escalation: "No",
+    routing: "Front Desk",
+    keywords: ["what", "documents", "need", "checkin"]
+  },
+  {
+    id: "FAQ005",
+    category: "Arrival & Check-in",
+    question: "Can I request a room on a higher floor?",
+    answer: "Room preferences are subject to availability. Please contact the Front Desk.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["request", "room", "higher", "floor"]
+  },
+  {
+    id: "FAQ006",
+    category: "Arrival & Check-in",
+    question: "Is there a deposit at check-in?",
+    answer: "Deposit requirements may vary by booking. Please confirm with the Front Desk.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["there", "deposit", "checkin"]
+  },
+  {
+    id: "FAQ007",
+    category: "Departure & Check-out",
+    question: "What time is check-out?",
+    answer: "Check-out is at 12:00 PM (noon).",
+    escalation: "No",
+    routing: "Front Desk",
+    keywords: ["what", "time", "checkout"]
+  },
+  {
+    id: "FAQ008",
+    category: "Departure & Check-out",
+    question: "Can I request late check-out?",
+    answer: "Late check-out is subject to availability and may involve a fee. Please contact the Front Desk.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["request", "late", "checkout"]
+  },
+  {
+    id: "FAQ009",
+    category: "Departure & Check-out",
+    question: "Can I leave my luggage after check-out?",
+    answer: "Yes. Please ask the Front Desk about luggage storage after check-out.",
+    escalation: "No",
+    routing: "Front Desk",
+    keywords: ["leave", "luggage", "after", "checkout"]
+  },
+  {
+    id: "FAQ010",
+    category: "Departure & Check-out",
+    question: "Can I get a copy of my invoice?",
+    answer: "Please contact the Front Desk for billing documents or invoice corrections.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["copy", "invoice"]
+  },
+  {
+    id: "FAQ011",
+    category: "Departure & Check-out",
+    question: "Can you change the payment method on my bill?",
+    answer: "I cannot modify payments. Please contact the Front Desk for assistance.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["change", "payment", "method", "bill"]
+  },
+  {
+    id: "FAQ012",
+    category: "Facilities",
+    question: "What are the gym opening hours?",
+    answer: "The fitness center is open daily from 6:00 AM to 10:00 PM.",
+    escalation: "No",
+    routing: "Fitness Center",
+    keywords: ["what", "opening", "hours"]
+  },
+  {
+    id: "FAQ013",
+    category: "Facilities",
+    question: "Is there a swimming pool?",
+    answer: "Yes. The outdoor pool is open daily from 7:00 AM to 9:00 PM.",
+    escalation: "No",
+    routing: "Recreation",
+    keywords: ["there", "swimming", "pool"]
+  },
+  {
+    id: "FAQ014",
+    category: "Facilities",
+    question: "Is Wi-Fi available?",
+    answer: "Complimentary Wi-Fi is available in guest rooms and public areas. Ask the Front Desk if you need help connecting.",
+    escalation: "No",
+    routing: "Front Desk",
+    keywords: ["wifi", "available"]
+  },
+  {
+    id: "FAQ015",
+    category: "Facilities",
+    question: "Is there a business center?",
+    answer: "Yes. The business center is available daily from 7:00 AM to 10:00 PM.",
+    escalation: "No",
+    routing: "Business Center",
+    keywords: ["there", "business", "center"]
+  },
+  {
+    id: "FAQ016",
+    category: "Facilities",
+    question: "Is there a quiet place to work?",
+    answer: "You can use the business center or ask the Front Desk about available quiet work areas.",
+    escalation: "No",
+    routing: "Front Desk",
+    keywords: ["there", "quiet", "place", "work"]
+  },
+  {
+    id: "FAQ017",
+    category: "Facilities",
+    question: "Is the hotel wheelchair accessible?",
+    answer: "The hotel offers accessible routes and selected accessible facilities. Please contact the Front Desk to confirm your specific needs.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["hotel", "wheelchair", "accessible"]
+  },
+  {
+    id: "FAQ018",
+    category: "Dining",
+    question: "What time is breakfast served?",
+    answer: "Breakfast is served daily from 6:30 AM to 10:30 AM at the hotel restaurant.",
+    escalation: "No",
+    routing: "Restaurant",
+    keywords: ["what", "time", "breakfast", "served"]
+  },
+  {
+    id: "FAQ019",
+    category: "Dining",
+    question: "Is breakfast included in my booking?",
+    answer: "Breakfast inclusion depends on your reservation. Please check your booking confirmation or ask the Front Desk.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["breakfast", "included", "booking"]
+  },
+  {
+    id: "FAQ020",
+    category: "Dining",
+    question: "Is room service available?",
+    answer: "Room service is available daily from 7:00 AM to 11:00 PM.",
+    escalation: "No",
+    routing: "Room Service",
+    keywords: ["room", "service", "available"]
+  },
+  {
+    id: "FAQ021",
+    category: "Dining",
+    question: "Do you offer vegetarian meals?",
+    answer: "Vegetarian options are available. Please check with the restaurant for current dishes and ingredients.",
+    escalation: "No",
+    routing: "Restaurant",
+    keywords: ["offer", "vegetarian", "meals"]
+  },
+  {
+    id: "FAQ022",
+    category: "Dining",
+    question: "Can you guarantee an allergen-free meal?",
+    answer: "I cannot guarantee allergen-free preparation. Please speak directly with restaurant staff before ordering.",
+    escalation: "Yes",
+    routing: "Restaurant",
+    keywords: ["guarantee", "allergenfree", "meal"]
+  },
+  {
+    id: "FAQ023",
+    category: "Dining",
+    question: "Can I book a restaurant table?",
+    answer: "I cannot create reservations in this prototype. Please contact the restaurant team to check availability.",
+    escalation: "Yes",
+    routing: "Restaurant",
+    keywords: ["book", "restaurant", "table"]
+  },
+  {
+    id: "FAQ024",
+    category: "Housekeeping & Comfort",
+    question: "Can I request extra towels?",
+    answer: "Yes. Please contact Housekeeping to arrange extra towels.",
+    escalation: "Yes",
+    routing: "Housekeeping",
+    keywords: ["request", "extra", "towels"]
+  },
+  {
+    id: "FAQ025",
+    category: "Housekeeping & Comfort",
+    question: "Can I get an extra pillow?",
+    answer: "Please contact Housekeeping to request an additional pillow.",
+    escalation: "Yes",
+    routing: "Housekeeping",
+    keywords: ["extra", "pillow"]
+  },
+  {
+    id: "FAQ026",
+    category: "Housekeeping & Comfort",
+    question: "Can I schedule room cleaning?",
+    answer: "Please contact Housekeeping to arrange a preferred cleaning time.",
+    escalation: "Yes",
+    routing: "Housekeeping",
+    keywords: ["schedule", "room", "cleaning"]
+  },
+  {
+    id: "FAQ027",
+    category: "Housekeeping & Comfort",
+    question: "The air conditioning is not working. What should I do?",
+    answer: "I am sorry about that. Please contact the Front Desk so the maintenance team can assist.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["conditioning", "working", "what", "should"]
+  },
+  {
+    id: "FAQ028",
+    category: "Housekeeping & Comfort",
+    question: "I lost an item in the hotel. Who can help?",
+    answer: "Please contact the Front Desk to report a lost item.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["lost", "item", "hotel", "help"]
+  },
+  {
+    id: "FAQ029",
+    category: "Housekeeping & Comfort",
+    question: "Can I request a wake-up call?",
+    answer: "Please contact the Front Desk to arrange a wake-up call.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["request", "wakeup", "call"]
+  },
+  {
+    id: "FAQ030",
+    category: "Bleisure & Local Guidance",
+    question: "Can you suggest a place to visit after my meetings?",
+    answer: "Popular Singapore attractions include Gardens by the Bay and Marina Bay. Please verify current hours and tickets with the attraction.",
+    escalation: "No",
+    routing: "Concierge",
+    keywords: ["suggest", "place", "visit", "after", "meetings"]
+  },
+  {
+    id: "FAQ031",
+    category: "Bleisure & Local Guidance",
+    question: "How do I get to the airport?",
+    answer: "The airport can be reached by taxi or public transport. Please ask the Concierge for route options from the hotel.",
+    escalation: "No",
+    routing: "Concierge",
+    keywords: ["airport"]
+  },
+  {
+    id: "FAQ032",
+    category: "Bleisure & Local Guidance",
+    question: "Can you book a city tour for me?",
+    answer: "I cannot book tours in this prototype. Please contact the Concierge for options and availability.",
+    escalation: "Yes",
+    routing: "Concierge",
+    keywords: ["book", "city", "tour"]
+  },
+  {
+    id: "FAQ033",
+    category: "Bleisure & Local Guidance",
+    question: "Do you have information about public transport?",
+    answer: "The Concierge can help you identify nearby public transport options and routes.",
+    escalation: "No",
+    routing: "Concierge",
+    keywords: ["have", "information", "about", "public", "transport"]
+  },
+  {
+    id: "FAQ034",
+    category: "Bleisure & Local Guidance",
+    question: "Can you recommend activities for a short evening?",
+    answer: "For a short evening, consider a waterfront walk or a nearby dining area. The Concierge can help tailor suggestions.",
+    escalation: "No",
+    routing: "Concierge",
+    keywords: ["recommend", "activities", "short", "evening"]
+  },
+  {
+    id: "FAQ035",
+    category: "Support & Safety",
+    question: "I feel unsafe in my room. What should I do?",
+    answer: "If you are in immediate danger, contact local emergency services. Please also contact hotel security or the Front Desk immediately.",
+    escalation: "Yes",
+    routing: "Security",
+    keywords: ["feel", "unsafe", "room", "what", "should"]
+  },
+  {
+    id: "FAQ036",
+    category: "Support & Safety",
+    question: "I need urgent medical assistance.",
+    answer: "If this is a medical emergency, contact local emergency services immediately. Hotel staff can also help you seek assistance.",
+    escalation: "Yes",
+    routing: "Security",
+    keywords: ["need", "urgent", "medical", "assistance"]
+  },
+  {
+    id: "FAQ037",
+    category: "Support & Safety",
+    question: "Can you change my reservation dates?",
+    answer: "I cannot modify reservations. Please contact the reservations team or the channel where you booked.",
+    escalation: "Yes",
+    routing: "Reservations",
+    keywords: ["change", "reservation", "dates"]
+  },
+  {
+    id: "FAQ038",
+    category: "Support & Safety",
+    question: "Can you process my credit card payment?",
+    answer: "I cannot process payments or collect card details. Please use an authorized payment channel or contact the Front Desk.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["process", "credit", "card", "payment"]
+  },
+  {
+    id: "FAQ039",
+    category: "Support & Safety",
+    question: "I want to make a complaint about my stay.",
+    answer: "I am sorry to hear that. Please contact the Front Desk or Guest Relations so they can assist you.",
+    escalation: "Yes",
+    routing: "Guest Relations",
+    keywords: ["want", "make", "complaint", "about", "stay"]
+  },
+  {
+    id: "FAQ040",
+    category: "Support & Safety",
+    question: "Can I speak to a staff member?",
+    answer: "Of course. Please contact the Front Desk or Guest Relations for personal assistance.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["speak", "staff", "member"]
+  },
+  {
+    id: "FAQ041",
+    category: "Arrival & Check-in",
+    question: "How can I get from Changi Airport to the hotel?",
+    answer: "You can travel from Changi Airport by taxi, ride-hailing service, or public transport. For the best route to this property, please confirm the hotel address with the Front Desk.",
+    escalation: "No",
+    routing: "Front Desk",
+    keywords: ["from", "changi", "airport", "hotel"]
+  },
+  {
+    id: "FAQ042",
+    category: "Arrival & Check-in",
+    question: "Can I arrange airport pickup?",
+    answer: "Airport transfer availability and fees must be confirmed with the Front Desk. I cannot book a transfer directly.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["arrange", "airport", "pickup"]
+  },
+  {
+    id: "FAQ043",
+    category: "Arrival & Check-in",
+    question: "Can I check in if I arrive late at night?",
+    answer: "Please inform the Front Desk of your expected arrival time so the team can confirm late-arrival arrangements for your reservation.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["check", "arrive", "late", "night"]
+  },
+  {
+    id: "FAQ044",
+    category: "Facilities",
+    question: "Can I print documents for a meeting?",
+    answer: "Please contact the Front Desk or Business Center to confirm printing availability, pricing, and assistance.",
+    escalation: "Yes",
+    routing: "Business Center",
+    keywords: ["print", "documents", "meeting"]
+  },
+  {
+    id: "FAQ045",
+    category: "Facilities",
+    question: "Are there meeting rooms I can use?",
+    answer: "Meeting-space availability, capacity, and rates depend on the property. The events team can confirm suitable options.",
+    escalation: "Yes",
+    routing: "Events Team",
+    keywords: ["there", "meeting", "rooms"]
+  },
+  {
+    id: "FAQ046",
+    category: "Facilities",
+    question: "Is there a place where I can take a video call?",
+    answer: "For a quieter place to take a call, please ask the Front Desk about available work areas or meeting spaces.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["there", "place", "where", "take", "video", "call"]
+  },
+  {
+    id: "FAQ047",
+    category: "Facilities",
+    question: "Can I borrow a power adapter?",
+    answer: "Please ask the Front Desk whether a compatible power adapter is available. Availability cannot be guaranteed.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["borrow", "power", "adapter"]
+  },
+  {
+    id: "FAQ048",
+    category: "Dining",
+    question: "Is there a place to get coffee before an early meeting?",
+    answer: "Please check with the Front Desk for current coffee and breakfast options and their opening hours.",
+    escalation: "No",
+    routing: "Front Desk",
+    keywords: ["there", "place", "coffee", "before", "early", "meeting"]
+  },
+  {
+    id: "FAQ049",
+    category: "Dining",
+    question: "Can I order food after the restaurant closes?",
+    answer: "Late-night food options depend on current hotel services. Please contact the Front Desk to check what is available.",
+    escalation: "Yes",
+    routing: "Food & Beverage",
+    keywords: ["order", "food", "after", "restaurant", "closes"]
+  },
+  {
+    id: "FAQ050",
+    category: "Housekeeping & Comfort",
+    question: "My room is too noisy. Can I change rooms?",
+    answer: "I am sorry your room is noisy. Please contact the Front Desk to request assistance or a room change, subject to availability.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["room", "noisy", "change", "rooms"]
+  },
+  {
+    id: "FAQ051",
+    category: "Housekeeping & Comfort",
+    question: "Can I request an iron or ironing board?",
+    answer: "Please contact Housekeeping to confirm whether an iron or ironing board can be provided.",
+    escalation: "Yes",
+    routing: "Housekeeping",
+    keywords: ["request", "iron", "ironing", "board"]
+  },
+  {
+    id: "FAQ052",
+    category: "Bleisure & Local Guidance",
+    question: "What can I do in Singapore if I only have two hours free?",
+    answer: "For a short break, consider a nearby walk, café, or attraction that fits your location and schedule. Ask the Concierge for current recommendations and travel times.",
+    escalation: "No",
+    routing: "Concierge",
+    keywords: ["what", "singapore", "only", "have", "hours", "free"]
+  },
+  {
+    id: "FAQ053",
+    category: "Bleisure & Local Guidance",
+    question: "Can you suggest somewhere to have dinner after a business meeting?",
+    answer: "The Concierge can suggest dining options based on your preferred cuisine, budget, and location. Please confirm opening hours and availability before visiting.",
+    escalation: "No",
+    routing: "Concierge",
+    keywords: ["suggest", "somewhere", "have", "dinner", "after", "business", "meeting"]
+  },
+  {
+    id: "FAQ054",
+    category: "Bleisure & Local Guidance",
+    question: "What is the easiest way to reach a meeting in the city?",
+    answer: "The best option depends on your destination and departure time. Public transport, taxis, and ride-hailing may be suitable; the Concierge can help compare routes.",
+    escalation: "No",
+    routing: "Concierge",
+    keywords: ["what", "easiest", "reach", "meeting", "city"]
+  },
+  {
+    id: "FAQ055",
+    category: "Support & Safety",
+    question: "I left my passport in a taxi. What should I do?",
+    answer: "Please contact the Front Desk immediately for assistance with the transport provider and local reporting guidance. For urgent travel-document advice, contact your embassy or consulate.",
+    escalation: "Yes",
+    routing: "Front Desk",
+    keywords: ["left", "passport", "taxi", "what", "should"]
+  },
+];
+    // Interface logic
+    function toggleChat() {
+      const modal = document.getElementById("chatModal");
+      modal.classList.toggle("open");
+      if (modal.classList.contains("open")) {
+        document.getElementById("chatInput").focus();
+      }
+    }
+
+    function openChatWithQuery(query) {
+      const modal = document.getElementById("chatModal");
+      if (!modal.classList.contains("open")) {
+        modal.classList.add("open");
+      }
+      sendUserMessage(query);
+    }
+
+    function sendQuickMessage(query) {
+      sendUserMessage(query);
+    }
+
+    function handleChatSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById("chatInput");
+      const message = input.value.trim();
+      if (!message) return;
+      input.value = "";
+      sendUserMessage(message);
+    }
+
+    // User input tokenization to extract words
+    function tokenize(text) {
+      return text.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^\w\s]/g, '').split(/\s+/).filter(w => w.length > 2);
+    }
+
+    // Smart search by KEYWORDS
+    function findBestFAQ(userText) {
+      const userTokens = tokenize(userText);
+      if (userTokens.length === 0) return null;
+
+      let bestScore = 0;
+      let bestItem = null;
+
+      for (const faq of FAQ_DATABASE) {
+        let matchCount = 0;
+        
+        for (const token of userTokens) {
+          if (faq.keywords.some(keyword => keyword.includes(token) || token.includes(keyword))) {
+            matchCount++;
+          }
+        }
+
+        const score = matchCount / userTokens.length;
+        
+        if (score > bestScore) {
+          bestScore = score;
+          bestItem = faq;
+        }
+      }
+
+      if (bestScore > 0) {
+        return { item: bestItem, score: bestScore };
+      }
+      return null;
+    }
+
+    function sendUserMessage(text) {
+      const messagesContainer = document.getElementById("chatMessages");
+
+      const userMsgEl = document.createElement("div");
+      userMsgEl.className = "message user";
+      userMsgEl.innerHTML = `
+        <div class="msg-content">${escapeHTML(text)}</div>
+        <div class="msg-meta">You • Just now</div>
+      `;
+      messagesContainer.appendChild(userMsgEl);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+      setTimeout(() => {
+        const result = findBestFAQ(text);
+        const botMsgEl = document.createElement("div");
+        botMsgEl.className = "message bot";
+
+        if (result && result.item) {
+          const faq = result.item;
+          let escalationBlock = "";
+          if (faq.escalation === "Yes") {
+            escalationBlock = `
+              <div class="escalation-card">
+                <div class="escalation-badge">
+                  <i class="fa-solid fa-triangle-exclamation"></i> Action Required: Escalation
+                </div>
+                <div>Department: <span class="routing-tag">${faq.routing}</span></div>
+                <div style="font-size: 0.7rem; color: #7f1d1d;">Hotel staff has been notified for follow-up.</div>
+              </div>
+            `;
+          }
+
+          botMsgEl.innerHTML = `
+            <div class="msg-content">
+              <p>${faq.answer}</p>
+              ${escalationBlock}
+            </div>
+            <div class="msg-meta"><span style="color:var(--gold)">[#${faq.id}]</span> Verified FAQ • Routing: ${faq.routing}</div>
+          `;
+        } else {
+          botMsgEl.innerHTML = `
+            <div class="msg-content">
+              <p>I could not find an exact match for your query. For personalized requests or immediate assistance, our Front Desk and Concierge are available 24/7.</p>
+              <div class="escalation-card">
+                <div class="escalation-badge">
+                  <i class="fa-solid fa-headset"></i> General Escalation
+                </div>
+                <div>Department: <span class="routing-tag">Front Desk</span></div>
+              </div>
+            </div>
+            <div class="msg-meta">Marriott Assistant • Alternative route</div>
+          `;
+        }
+
+        messagesContainer.appendChild(botMsgEl);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }, 400);
+    }
+
+    function escapeHTML(str) {
+      return str.replace(/[&<>'"]/g, 
+        tag => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          "'": '&#39;',
+          '"': '&quot;'
+        }[tag] || tag)
+      );
+    }
+
+  </script>
+</body>
+</html>
